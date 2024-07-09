@@ -1,4 +1,7 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
+import { IoMdAdd } from "react-icons/io";
+
+import { RiSubtractFill } from "react-icons/ri";
 import './Button.scss'
 
 const Button = () => {
@@ -7,14 +10,15 @@ const Button = () => {
     const decrement = () => setCount(count-1);
 	return (
 		<div className="container">
-			<section className="button" onClick={decrement}>-
-            </section>
-            <div className="line" />
-            <section className="number" >{count}
-            </section>
-            <div className="line" />
-            <section className="button" onClick={increment}>+
-            </section>
+			<section className="button" onClick={decrement}>
+				<RiSubtractFill />
+			</section>
+			{/* <div className="line" /> */}
+			<section className="number">{count}</section>
+			{/* <div className="line" /> */}
+			<section className="button" onClick={increment}>
+				<IoMdAdd />
+			</section>
 		</div>
 	);
 };
