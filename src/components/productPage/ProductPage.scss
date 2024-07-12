@@ -192,7 +192,7 @@
     	display: flex;
     	gap: 40px;
     	justify-content: space-between;
-		border: 2px solid green;
+		// border: 2px solid green;
     	@include respond-to('tablet') {
       	gap: 20px;
 		flex-wrap: wrap;
@@ -206,8 +206,45 @@
     	}
 
   }
-  .section_5{
-
+	.section_5{
+		// border: 2px solid green;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 0;
+		h2{
+			font-size: 30px;
+		}
+		button{
+			padding: 10px 20px;
+			height: 50px;
+			width: auto;
+			font-size: 18px;
+			background-color: #b3a209;
+			color: white;
+			border: none;
+			border-radius: 6px;
+			cursor: pointer;
+			&:hover {
+				background-color: #d4c535;
+			}
+		}
+	}
+	.section_6{
+		display: flex;
+    	gap: 40px;
+    	justify-content: space-between;
+		// border: 2px solid green;
+    	@include respond-to('tablet') {
+      	gap: 20px;
+		flex-wrap: wrap;
+		.card {
+    		flex: 1 1 calc(50% - 20px); 
+        }
+    	}
+    
+    	@include respond-to('phone') {
+      	flex-direction: column;
 	}
 }
-	
+}

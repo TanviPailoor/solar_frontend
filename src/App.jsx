@@ -5,14 +5,10 @@ import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Forget from "./components/forgot/Forget";
+import Cart from "./components/cart/Cart";
 const App = () => {
 	return (
 		<div>
-			{/* <Contact/> */}
-			{/* <Aboutus />  */}
-			{/* <ProductPage/> */}
-			{/* <Register/> */}
-
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<Contact />} />
@@ -21,6 +17,7 @@ const App = () => {
 					<Route path="/login" element={<Login />} />
 					<Route path="/register" element={<Register />} />
 					<Route path="/forgot-password" element={<Forget />} />
+					<Route path="/cart" element={<Cart/>}/>
 				</Routes>
 			</BrowserRouter>
 		</div>

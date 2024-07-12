@@ -1,12 +1,13 @@
 import React from "react";
 import "./ProductPage.scss";
 import solar_panel from "../../assets/solar_panel.png";
+import person from "../../assets/person.png";
 import StarRate from "../StarRate";
 import Button from "../Button/Button";
 import { FaTruckFast } from "react-icons/fa6";
 import { VscTools } from "react-icons/vsc";
 import Card from "../Card";
-
+import ReviewCard from "../reviewCard/ReviewCard";
 const relatedItemData = [
 	{
 		id: 1,
@@ -35,6 +36,32 @@ const relatedItemData = [
 		name: "Microtek 2000VA Sinewave Home Inverter",
 		price: "₹1520",
 		ratings: "88",
+	},
+];
+const reviewData = [
+	{
+		id: 1,
+		image: person,
+		name: "John Doe",
+		review:"ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+	},
+	{
+		id: 2,
+		image: person,
+		name: "John Doe",
+		review:"ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+	},
+	{
+		id: 3,
+		image: person,
+		name: "John Doe",
+		review:"ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+	},
+	{
+		id: 4,
+		image: person,
+		name: "John Doe",
+		review:"ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
 	},
 ];
 const ProductPage = () => {
@@ -127,7 +154,15 @@ const ProductPage = () => {
 						<Card key={item.id} item={item} />
 					))}
 				</section>
-				<section className="section_5"></section>
+				<section className="section_5">
+					<h2>Customer Feedback</h2>
+					<button>Write a Review</button>
+				</section>
+				<section className="section_6">
+					{reviewData.map((item) => (
+						<ReviewCard key={item.id} item={item} />
+					))}
+				</section>
 			</section>
 		</>
 	);

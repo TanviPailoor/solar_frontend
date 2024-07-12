@@ -1,0 +1,111 @@
+@mixin respond-to($media) {
+	@if $media == "phone" {
+		@media (max-width: 564px) {
+			@content;
+		}
+	} @else if $media == "tablet" {
+		@media (max-width: 768px) {
+			@content;
+		}
+	} @else if $media == "desktop" {
+		@media (min-width: 1024px) {
+			@content;
+		}
+	}
+}
+.main-container{
+	// border: 2px solid red;
+	background-color: #fbfaf0;
+	display: flex;
+	gap: 30px;
+	height: inherit;
+	padding: 60px;
+	@include respond-to("tablet") {
+		flex-direction: column;
+	}
+	@include respond-to("phone") {
+		padding: 30px 5px;
+		margin: 20px 0;
+	}
+	@include respond-to('desktop'){
+		display: flex;
+	}
+	.left1{
+		display: flex;
+		background-color: #fbfaf0;
+		flex: 2;
+		// border: 2px solid blue;
+		@include respond-to("phone") {
+			display: none;
+		}
+		img {
+			height: 100%;
+			width: 100%;
+			// border: 4px solid yellow;
+		}
+	}
+	.right1{
+		flex: 1;
+		background-color: #fbfaf0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0;
+		gap: 30px;
+		// border: 2px solid green;
+		.rtop {
+			// border: 2px solid red;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			h2 {
+				font-size: 36px;
+				font-weight: 600;
+			}
+			p{
+				font-size: 18px;
+			}
+		}
+		.rmid {
+			display: flex;
+			width: 100%;
+			border-bottom: 2px solid rgb(173, 171, 171);
+			padding: 10px;
+			input {
+				outline: none;
+				width: 100%;
+				border: none;
+				text-align: left;
+				font-size: 16px;
+				background-color: #fbfaf0;
+			}
+		}
+		.rbottom {
+			width: 100%;
+			// border: 2px solid blue;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			button {
+				padding: 10px 20px;
+				height: max-content;
+				width: 100%;
+				font-size: 16px;
+				background-color: #b3a209;
+				color: white;
+				border: none;
+				border-radius: 3px;
+				cursor: pointer;
+
+				&:hover {
+					background-color: #d4c535;
+				}
+			}
+			.blinks {
+				text-align: right;
+			}
+		}
+	}
+}
+
