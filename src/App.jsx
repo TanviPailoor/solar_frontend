@@ -6,6 +6,7 @@ import Register from "./components/register/Register";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Forget from "./components/forgot/Forget";
 import Cart from "./components/cart/Cart";
+import CreateProduct from "./components/createProduct/CreateProduct";
 const App = () => {
 	return (
 		<div>
@@ -17,7 +18,8 @@ const App = () => {
 					<Route path="/login" element={<Login />} />
 					<Route path="/register" element={<Register />} />
 					<Route path="/forgot-password" element={<Forget />} />
-					<Route path="/cart" element={<Cart/>}/>
+					<Route path="/cart" element={<Cart />} />
+					<Route path="/create-product" element={<CreateProduct/>}/>
 				</Routes>
 			</BrowserRouter>
 		</div>
