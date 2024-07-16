@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Forget from "./components/forgot/Forget";
 import Cart from "./components/cart/Cart";
 import CreateProduct from "./components/createProduct/CreateProduct";
+import ShippingAddress from "./components/shippingAddress/ShippingAddress";
 const App = () => {
 	return (
 		<div>
@@ -19,7 +20,8 @@ const App = () => {
 					<Route path="/register" element={<Register />} />
 					<Route path="/forgot-password" element={<Forget />} />
 					<Route path="/cart" element={<Cart />} />
-					<Route path="/create-product" element={<CreateProduct/>}/>
+					<Route path="/create-product" element={<CreateProduct />} />
+					<Route path="/shipping-address" element={<ShippingAddress/>}/>
 				</Routes>
 			</BrowserRouter>
 		</div>
